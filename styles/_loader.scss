@@ -1,7 +1,7 @@
 .loader {
-	background: pink;
-	width: 100%;
-	height: 100%;
+	background-color: pink;
+	inline-size: 100%;
+	block-size: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -12,8 +12,8 @@
 	animation: loader 2s linear forwards;
 
 	div {
-		width: 4rem;
-		height: 4rem;
+		inline-size: 4rem;
+		block-size: 4rem;
 		background-color: yellow;
 		border-radius: 50%;
 		transform: scale(0);

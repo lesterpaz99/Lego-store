@@ -6,12 +6,23 @@ $brand-color: #d5040a;
 	box-sizing: border-box;
 }
 
+a {
+	text-decoration: none;
+	color: initial;
+}
+
+img {
+	inline-size: 100%;
+	block-size: auto;
+}
+
 :root {
 	font-size: 62.5%;
 }
 
 body {
+	font-size: 1.6rem;
 	font-family: 'Lato', sans-serif;
-	height: 100vh;
+	block-size: 100vh;
 	overflow: hidden;
 }

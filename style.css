@@ -341,23 +341,36 @@ template {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+img {
+  inline-size: 100%;
+  block-size: auto;
+}
+
 :root {
   font-size: 62.5%;
 }
 
 body {
+  font-size: 1.6rem;
   font-family: "Lato", sans-serif;
-  height: 100vh;
+  block-size: 100vh;
   overflow: hidden;
 }
 
 .page {
   position: relative;
-  height: 100vh;
-  width: 100%;
+  block-size: 100vh;
+  inline-size: 100%;
 }
 
 .container {
+  inline-size: 100%;
+  block-size: 100%;
   position: absolute;
   z-index: 1;
   display: grid;
@@ -367,9 +380,9 @@ body {
 }
 
 .loader {
-  background: pink;
-  width: 100%;
-  height: 100%;
+  background-color: pink;
+  inline-size: 100%;
+  block-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -379,8 +392,8 @@ body {
   animation: loader 2s linear forwards;
 }
 .loader div {
-  width: 4rem;
-  height: 4rem;
+  inline-size: 4rem;
+  block-size: 4rem;
   background-color: yellow;
   border-radius: 50%;
   transform: scale(0);
@@ -416,6 +429,40 @@ body {
   }
   50% {
     transform: scale(1);
+  }
+}
+.header {
+  background-color: #ffd602;
+  grid-area: "nav";
+}
+
+.navbar {
+  block-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline-start: 1rem;
+  transform: translateY(-130px);
+  animation: navbar 0.5s ease-in-out 2s forwards;
+}
+.navbar a img {
+  inline-size: 5rem;
+  block-size: 5rem;
+}
+.navbar__content {
+  padding-inline-start: 2rem;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+}
+
+@keyframes navbar {
+  0% {
+    transform: translateY(-130px);
+  }
+  100% {
+    transform: translate(0);
   }
 }
 

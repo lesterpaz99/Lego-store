@@ -1,0 +1,39 @@
+@use '../global';
+
+.header {
+	background-color: global.$primary-color;
+	grid-area: 'nav';
+}
+
+.navbar {
+	block-size: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-inline-start: 1rem;
+	transform: translateY(-130px);
+
+	animation: navbar 0.5s ease-in-out 2s forwards;
+
+	a img {
+		inline-size: 5rem;
+		block-size: 5rem;
+	}
+
+	&__content {
+		padding-inline-start: 2rem;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		gap: 1.4rem;
+	}
+}
+
+@keyframes navbar {
+	0% {
+		transform: translateY(-130px);
+	}
+	100% {
+		transform: translate(0);
+	}
+}
