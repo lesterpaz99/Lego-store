@@ -2,7 +2,7 @@
 
 .header {
 	background-color: global.$primary-color;
-	grid-area: 'nav';
+	grid-area: nav;
 }
 
 .navbar {
@@ -13,7 +13,7 @@
 	padding-inline-start: 1rem;
 	transform: translateY(-130px);
 
-	animation: navbar 0.5s ease-in-out 2s forwards;
+	animation: navbar 0.5s cubic-bezier(0.4, 0, 0.2, 1) 2s forwards;
 
 	a img {
 		inline-size: 5rem;
