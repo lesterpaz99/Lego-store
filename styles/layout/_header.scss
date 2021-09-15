@@ -1,7 +1,6 @@
 @use '../global';
 
 .header {
-	background-color: global.$primary-color;
 	grid-area: nav;
 }
 
@@ -9,8 +8,8 @@
 	block-size: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	padding-inline-start: 1rem;
+	justify-content: flex-start;
+	padding-inline-start: 4rem;
 	transform: translateY(-130px);
 
 	animation: navbar 0.5s cubic-bezier(0.4, 0, 0.2, 1) 2s forwards;
