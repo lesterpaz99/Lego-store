@@ -1,0 +1,48 @@
+.side-content {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	align-items: center;
+	grid-area: aside;
+
+	p {
+		writing-mode: vertical-lr;
+		transform: rotate(180deg);
+		font-size: 3rem;
+		opacity: 0;
+
+		animation: side-content-text 0.5s linear 2s forwards;
+	}
+
+	img {
+		grid-column: 2 / 6;
+		transform: translateY(60rem);
+
+		animation: superhero 1.2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 3s forwards;
+	}
+
+	&__background {
+		background: aquamarine;
+		grid-column: 4 / 7;
+		block-size: 100%;
+		inline-size: 100%;
+		position: absolute;
+	}
+}
+
+@keyframes side-content-text {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes superhero {
+	0% {
+		transform: translateY(60rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
