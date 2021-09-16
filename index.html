@@ -60,7 +60,7 @@
 					<ul class="hero-slider__container">
 						<li>
 							<div></div>
-							<button>
+							<button class="hero-btn">
 								<img
 									src="https://i.ibb.co/tKWqw8J/spiderman.png"
 									alt="spiderman"
@@ -69,13 +69,13 @@
 						</li>
 						<li>
 							<div></div>
-							<button>
+							<button class="hero-btn">
 								<img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="robin" />
 							</button>
 						</li>
 						<li>
 							<div></div>
-							<button>
+							<button class="hero-btn">
 								<img src="https://i.ibb.co/M18p91c/batman.webp" alt="batman" />
 							</button>
 						</li>
@@ -83,7 +83,60 @@
 				</section>
 			</div>
 			<!-- Modal -->
-			<section></section>
+			<section class="modal hidden">
+				<div class="modal__content">
+					<button
+						class="modal__close-btn"
+						id="modal__close-btn"
+						title="button to close modal"
+					></button>
+
+					<div class="modal__content-slider">
+						<input
+							type="radio"
+							class="input-radio"
+							name="slider-1"
+							id="radio-1"
+							checked
+						/>
+						<input
+							type="radio"
+							class="input-radio"
+							name="slider-1"
+							id="radio-2"
+						/>
+						<input
+							type="radio"
+							class="input-radio"
+							name="slider-1"
+							id="radio-3"
+						/>
+
+						<div class="cards">
+							<label for="radio-1" class="card" id="card-1">
+								<img
+									src="https://static.platzi.com/media/public/uploads/spider-man_db8af43d-b692-4986-a385-e645d286e142.png"
+									alt="spiderman lego"
+								/>
+							</label>
+							<label for="radio-2" class="card" id="card-2">
+								<img
+									src="https://static.platzi.com/media/public/uploads/spider-man-2_b24c96b3-6d59-496f-815d-32b25eba0141.png"
+									alt="spiderman lego 2"
+								/>
+							</label>
+							<label for="radio-3" class="card" id="card-3">
+								<img
+									src="https://static.platzi.com/media/public/uploads/spider-man-3_19f5c510-8059-4477-abf8-42249a5445b7.png"
+									alt="spiderman lego 3"
+								/>
+							</label>
+						</div>
+					</div>
+					<button class="cta-btn">I want it!</button>
+				</div>
+			</section>
 		</div>
+		<script src="./app.js"></script>
 	</body>
 </html>

@@ -599,5 +599,112 @@ body {
     transform: translateY(0);
   }
 }
+.modal {
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 10;
+  place-items: center;
+}
+.modal__content {
+  background-color: white;
+  inline-size: 50%;
+  block-size: 55%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 1.8rem;
+}
+.modal__close-btn {
+  position: absolute;
+  inline-size: 5rem;
+  block-size: 5rem;
+  background-color: transparent;
+  background: url("https://img.icons8.com/windows/32/000000/macos-close.png") no-repeat center/cover;
+  border: none;
+  inset-inline-end: 1rem;
+  inset-block-start: 1rem;
+}
+.modal__close-btn:hover, .modal__close-btn:focus {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: grid;
+}
+
+.modal__content-slider {
+  inline-size: 20rem;
+  block-size: 25rem;
+  transform-style: preserve-3d;
+  display: grid;
+  place-items: center;
+}
+
+.cards {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.cards .card {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inline-size: 50%;
+  block-size: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  background-color: yellow;
+  transition: transform 0.5s ease-in-out;
+}
+
+.input-radio {
+  display: none;
+}
+
+#radio-1:checked ~ .cards #card-1,
+#radio-2:checked ~ .cards #card-2,
+#radio-3:checked ~ .cards #card-3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+#radio-1:checked ~ .cards #card-2,
+#radio-2:checked ~ .cards #card-3,
+#radio-3:checked ~ .cards #card-1 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+#radio-1:checked ~ .cards #card-3,
+#radio-2:checked ~ .cards #card-1,
+#radio-3:checked ~ .cards #card-2 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.cta-btn {
+  border: none;
+  padding: 1rem 2rem;
+  background-color: #d5040a;
+  color: white;
+  font-weight: 700;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */
